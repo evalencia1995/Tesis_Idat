@@ -1,6 +1,5 @@
 package com.mitocode.dao;
 
-import javax.transaction.Transactional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -16,7 +15,7 @@ public interface IConsultaExamenDAO extends JpaRepository<ConsultaExamen, Intege
 	@Modifying  //clausula de modificacion
 	//ya lo vimos en idat xd solo que en este caso 
 	//como es nativo usamos nativeQuery = true
-@Query(value = "INSERT INTO consulta_examen(id_consulta,id_examen) VALUES (:idConsulta, :IdExamen",nativeQuery = true)
+@Query(value = "INSERT INTO consulta_examen(id_consulta, id_examen) VALUES (:idConsulta, :idExamen",nativeQuery = true)
 //de esta manera pasamos los parametros
 Integer registrar(@Param("idConsulta")Integer idConsulta,@Param("idExamen")Integer idExamen) ;   //poblamios la tabla
 }

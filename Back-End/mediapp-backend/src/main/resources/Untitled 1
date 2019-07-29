@@ -16,3 +16,13 @@ cambios 26/07/2019--> dto listado de consultas
 spring.jpa.hibernate.ddl-auto permite definir el comportamiento del esquema create delete
 jackson.datatype.jsr310 permite define el comportamiento para fechas con json
 spring hateoas permite exponer rutas de los recursos en la respuesta json 
+
+select * from mediappbd.examen;
+select * from mediappbd.consulta;
+select * from mediappbd.examen;
+select * from mediappbd.medico;
+insert into mediappbd.medico(cmp,apellidos,nombres) values ('CIRUJIA','torres','juan');
+select * from mediappbd.especialidad;
+insert into mediappbd.especialidad(nombre) values ('Cirujia');
+select * from mediappbd.paciente;
+insert into mediappbd.paciente(apellidos,direccion,dni,email,nombres,telefono) values ('emanuel','los olivos','72834566','loco@gmail.com','loreto','882346557');

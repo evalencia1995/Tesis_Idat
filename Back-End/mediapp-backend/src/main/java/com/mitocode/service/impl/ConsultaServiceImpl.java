@@ -46,7 +46,7 @@ public class ConsultaServiceImpl implements IConsultaService {
 	@Override
 	public List<Consulta> listar() {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.findAll();
 	}
 	@Transactional // se hace un rolbalk de forma automatica
 	@Override
@@ -57,7 +57,7 @@ public class ConsultaServiceImpl implements IConsultaService {
 		//iterando la lista de examen que viene en el json para insertar uno a uno en la tabla consulta examen
 		dao.save(dto.getConsulta());
 		dto.getLstExamen().forEach(e -> ceDAO.registrar(dto.getConsulta().getIdConsulta(), e.getIdExamen()));
-		
+		//para cada examen e quiero llamar al dao ceDAO y registrar registrar 
 		return dto.getConsulta();
 	}
 	
